@@ -1,5 +1,6 @@
-import Movies from '@/components/Movies';
 import React from 'react'
+import Movies from '@/components/Movies';
+
 
 const Page = async({params}) => {
     const keyword = params.keyword;
@@ -12,7 +13,7 @@ const Page = async({params}) => {
     return (
         <div>
             {
-                !data?.results ?
+                !data?.results?
                 <div>Aranılan şey bulunamadı..</div>:
                 <div className='flex items-center flex-wrap '>
                   {

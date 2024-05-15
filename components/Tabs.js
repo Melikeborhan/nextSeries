@@ -9,7 +9,7 @@ const Tabs = () => {
     const genre = searchParams.get('genre') 
 
 
-    console.log("genre",genre);
+    // console.log("genre",genre);
 
 
     const tabs = [

@@ -7,15 +7,14 @@ import { PiFilmSlateDuotone } from "react-icons/pi";
 const Header = () => {
   const [keyword,setKeyword] = useState('')
   const router = useRouter();
+  
 
   const searchFunc = (e)=>{
-    if(e.type === 'keydown' && e.key !== 'Enter') return;
-    if( keyword.length>= 3 ){
-      router.push(`/search/${'keyword'}`)
+    if(e.key === 'Enter' &&  keyword.length>= 3 || e.type === 'click'){
+      router.push(`/search/${keyword}`)
+    }
   }
-  
-  }
-
+console.log('çalışıyor')
   return (
     <nav className="bg-gradient-to-r from-black via-red-800 to-red-900 flex lg:flex-row items-center justify-center lg:gap-5 md:gap-5 p-3 lg:p-12 h-20 w-full">
 
@@ -34,7 +33,7 @@ const Header = () => {
   <input
     onChange={e => setKeyword(e.target.value)}
     onKeyDown={searchFunc} 
-    className="w-full lg:w-auto flex-grow sm:px-2 sm:py-1 rounded-l-lg bg-transparent"
+    className="dark:text-black font-bold w-full lg:w-auto flex-grow sm:px-2 sm:py-1 rounded-l-lg bg-transparent"
     type="text"
     placeholder="Search"
   />

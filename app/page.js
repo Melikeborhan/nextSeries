@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = async ({searchParams}) => {
 
-  const res = await fetch(`https://api.themoviedb.org/3/${searchParams.genre ? "movie/" + searchParams.genre  : "trending/all/day"}?api_key=bb1bd9bf6865f720ebf88e6c483ec93c&language=en-us&page=1`, {next: {revalidate: 10000}})
+  const res = await fetch(`https://api.themoviedb.org/3/${searchParams.genre?"movie/" + searchParams.genre  : "trending/all/day"}?api_key=238b5c10fd9c1b8c48d8e9d48e23c915&language=en-us&page=1`, {next: {revalidate: 10000}})
   
   const data = await res.json();
 

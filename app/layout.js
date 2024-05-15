@@ -16,6 +16,7 @@ const Layout = ({children}) => {
     <Providers>
         <Header/>
         <Tabs/>
+        
         {children}
         </Providers>
         <Footer/>
